@@ -1,6 +1,6 @@
 ﻿namespace helloWorld
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,12 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SayHello = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // SayHello
+            // 
+            this.SayHello.Location = new System.Drawing.Point(97, 22);
+            this.SayHello.Name = "SayHello";
+            this.SayHello.Size = new System.Drawing.Size(75, 23);
+            this.SayHello.TabIndex = 0;
+            this.SayHello.Text = "SayHello";
+            this.SayHello.UseVisualStyleBackColor = true;
+            this.SayHello.Click += new System.EventHandler(this.SayHello_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(284, 59);
+            this.Controls.Add(this.SayHello);
+            this.Name = "Form1";
+            this.Text = "HelloWorld";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button SayHello;
     }
 }
 
